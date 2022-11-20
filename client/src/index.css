@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  background: #282c34;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background: #3d414a;
+  padding-inline: 1rem;
+}
+
+nav > div {
+  width: min(100vw, 1200px);
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+
+nav button {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+}
+
+main > div {
+  width: min(100vw, 800px);
+  display: flex;
+  flex-direction: column;
+  background: #282535;
+  margin-inline: auto;
+}
+
+.login-div {
+  justify-content: center;
+}
+
+.login-btn {
+  cursor: pointer;
+  margin-inline: auto;
+  padding: 1rem 5rem;
+}
+
+.chatroom-div {
+  justify-content: flex-end;
+}
+
+.messages {
+  height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-inline: 1rem;
+  margin-top: 1rem;
+}
+
+.message img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.message h5 {
+  font-weight: normal;
+  border-radius: 30px;
+  padding: 0.75rem 0.75rem;
+  margin-inline: 0.75rem;
+}
+
+.recieved h5 {
+  color: black;
+  background: white;
+}
+
+.sent {
+  justify-content: flex-end;
+}
+
+.sent img {
+  order: 2;
+}
+
+.sent h5 {
+  color: white;
+  background: rgb(71, 71, 255);
+}
+
+form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+form *:first-child {
+  width: 80%;
+  padding-block: 1rem;
+  padding-left: 0.5rem;
+}
+
+form *:last-child {
+  cursor: pointer;
+  width: 20%;
+  padding-block: 1rem;
+}
